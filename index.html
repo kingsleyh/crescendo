@@ -64,16 +64,35 @@
         }
 
         .logo {
-            font-size: 2rem;
-            font-weight: 400;
             font-family: 'Righteous', cursive;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            text-align: left;
+        }
+
+        .logo-main,
+        .logo-sub {
             background: linear-gradient(135deg, #667eea 0%, #f093fb 50%, #f5576c 100%);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: gradientShift 4s ease infinite;
-            letter-spacing: 2px;
+        }
+
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            opacity: 0.85;
+            margin-top: 0.2rem;
         }
 
         @keyframes gradientShift {
@@ -886,7 +905,10 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Crescendo</div>
+            <div class="logo">
+                <div class="logo-main">CRESCENDO</div>
+                <div class="logo-sub">ACADEMY</div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#courses">Courses</a></li>
